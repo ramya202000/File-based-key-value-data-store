@@ -21,7 +21,7 @@ the key will no longer be available for Read or Delete operations.<br>
 7. Appropriate error responses are returned to a client.
 <br>
 <h3>The data store will also support the following non-functional requirements.</h3>
-1. The size of the file storing data must never exceed 1GB.<br>
+<h4>1. The size of the file storing data must never exceed 1GB.<br>
 2. More than one client process cannot be allowed to use the same file as a data store at any
 given time.<br>
 </h4>
