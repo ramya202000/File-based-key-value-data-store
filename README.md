@@ -1,11 +1,11 @@
 <html>
-<h1>FILE BASED CRD </h1>
+<h3>FILE BASED CRD </h3>
     <body>
-    <h4>File-based key-value data store that supports the basic CRD (create, read, and delete)</h4>
-    <h3>operations. This data store is meant to be used as a local storage for one single process on one
-laptop. The data store is exposed as a library to clients.<h3><br>
-    <h4>The data store will support the following functional requirements.</h4>
-    <h3>1. It can be initialized using an optional file path. If one is not provided, it will reliably
+    <h3>File-based key-value data store that supports the basic CRD (create, read, and delete)</h3>
+    <h4>operations. This data store is meant to be used as a local storage for one single process on one
+laptop. The data store is exposed as a library to clients.</h4><br>
+    <h3>The data store will support the following functional requirements.</h3>
+    <h4>1. It can be initialized using an optional file path. If one is not provided, it will reliably
 create itself in a reasonable location on the laptop.
 2. A new key-value pair can be added to the data store using the Create operation. The key
 is always a string - capped at 32chars. The value is always a JSON object - capped at
@@ -24,7 +24,7 @@ The data store will also support the following non-functional requirements.
 1. The size of the file storing data must never exceed 1GB.
 2. More than one client process cannot be allowed to use the same file as a data store at any
 given time.
-</h3>
+</h4>
     </body>
 
 </html>
