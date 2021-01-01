@@ -16,11 +16,11 @@ function setup() {
   var readbutton = select('#read');
   var deleteinput=select('#del');
   var deletebutton=select('#delete');
-  var readlength=readinput.length;
+  var readall=select('#read-All')
   scoreit.mousePressed(submitscore);
   readbutton.mousePressed(readData);
   deletebutton.mousePressed(removeData);
-
+ readall.mousePressed(readallData);
   // Submit the score to the API
   function submitscore() {
     // Make the url
@@ -36,6 +36,14 @@ function setup() {
   }
   function readData(){
     var url = '/search/' + readinput.value();
+    loadJSON(url, submitted);
+    function submitted(result) {
+      // Just look at the reply in the console
+      console.log(result);
+    }
+  }
+  function readallData(){
+    var url = '/all';
     loadJSON(url, submitted);
     function submitted(result) {
       // Just look at the reply in the console
